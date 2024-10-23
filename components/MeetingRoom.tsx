@@ -22,7 +22,7 @@ const MeetingRoom = () => {
   const searchParams = useSearchParams(); 
 const isPersonalRoom = !!searchParams.get('personal')
 const [layout, setLayout] = useState<CallLayoutType>('speaker-left')
-const [showParticipants, setShowParticipants] = useState('false')
+const [showParticipants, setShowParticipants] = useState<boolean>(false)
 const router = useRouter();
 
 const { useCallCallingState} = useCallStateHooks(); 
